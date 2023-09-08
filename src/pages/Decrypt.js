@@ -37,17 +37,6 @@ const Decrypt = () => {
           <div className=" grid h-[100vh]">
             <Button
               // sx={{ height: 100 }}
-              className="cursor-pointer bg-tomato text-white border-black"
-              variant="contained"
-              color="secondary"
-              onClick={() => handlePageChange("/history")}
-            >
-              <div className="text-5xl">History</div>
-              {/* Add a black bar before this button */}
-            </Button>
-
-            <Button
-              // sx={{ height: 100 }}
               // onClick={() => handlePageChange("/decrypt")}
               className="cursor-pointer bg-white text-tomato relative  hover:bg-white"
               variant="contained"
@@ -60,24 +49,35 @@ const Decrypt = () => {
 
             <Button
               // sx={{ height: 100 }}
+              className="cursor-pointer bg-tomato text-white border-black"
+              variant="contained"
+              color="secondary"
+              onClick={() => handlePageChange("/history")}
+            >
+              <div className="text-5xl">History</div>
+              {/* Add a black bar before this button */}
+            </Button>
+
+            <Button
+              // sx={{ height: 100 }}
               onClick={() => handlePageChange("/")}
               className="cursor-pointer bg-tomato text-white relative"
               variant="contained"
               color="secondary"
             >
               <div className="text-5xl">Home</div>
+              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
               {/* Add a black bar before this button */}
-              {/* <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div> */}
             </Button>
           </div>
         </div>
       </div>
 
       <div className="w-10/12 ml-[16.6%]">
-        <div className="font-bold text-21xl pt-10 mx-10">
+        <div className="font-bold text-21xl pt-10 mx-10 text-center mb-10 pb-10">
           Decrypt your License Key
         </div>
-        <div className="my-5 mx-10 grid gap-3">
+        <div className="my-5 mx-10 grid gap-3 justify-center">
           <div className="text-6xl">Enter the License Code</div>
           <TextField
             className="page1-textbox"
@@ -94,7 +94,7 @@ const Decrypt = () => {
           />
         </div>
 
-        <div className="my-5  mx-10 grid gap-3">
+        <div className="my-5  mx-10 grid gap-3 justify-center">
           <div className="text-6xl">Enter the password used for encryption</div>
           <TextField
             className="page1-textbox"
@@ -113,7 +113,7 @@ const Decrypt = () => {
         </div>
 
         <div
-          className="[text-decoration:none] cursor-pointer [border:none] p-0 bg-red-600 m-auto my-10 rounded-sm w-[341px] h-[62px] flex flex-col items-center justify-center"
+          className="[text-decoration:none] cursor-pointer [border:none] p-0 bg-tomato m-auto my-20 rounded-sm w-[341px] h-[62px] flex flex-col items-center justify-center"
           onClick={handleDecrypt}
         >
           <div className="[text-decoration:none] relative text-6xl font-inter text-white text-center flex items-center justify-center w-[278.35px] h-[50.47px] shrink-0">{`Decrypt!`}</div>

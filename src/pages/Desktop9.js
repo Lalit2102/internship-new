@@ -150,6 +150,17 @@ const Desktop9 = ({
           <div className=" grid h-[100vh]">
             <Button
               // sx={{ height: 100 }}
+              // onClick={() => handlePageChange("/")}
+              className="cursor-pointer bg-white text-tomato relative hover:bg-white"
+              variant="contained"
+              color="secondary"
+            >
+              <div className="text-5xl">Home</div>
+              {/* Add a black bar before this button */}
+              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
+            </Button>
+            <Button
+              // sx={{ height: 100 }}
               className="cursor-pointer bg-tomato text-white border-black border-4 relative"
               variant="contained"
               color="secondary"
@@ -167,18 +178,6 @@ const Desktop9 = ({
               color="secondary"
             >
               <div className="text-5xl">Decrypt</div>
-              {/* Add a black bar before this button */}
-              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
-            </Button>
-
-            <Button
-              // sx={{ height: 100 }}
-              // onClick={() => handlePageChange("/")}
-              className="cursor-pointer bg-white text-tomato relative hover:bg-white"
-              variant="contained"
-              color="secondary"
-            >
-              <div className="text-5xl">Home</div>
               {/* Add a black bar before this button */}
               <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
             </Button>
@@ -204,42 +203,34 @@ const Desktop9 = ({
                 <div className="circle red flex items-center justify-center m-auto">
                   <div className="text-white">1</div>
                 </div>
-                <div className="text-center text-xl text-black mt-2 w-[9rem]">
-                  Customer Info
-                </div>
+                <div className="nav-text">Customer Info</div>
               </div>
             </div>
-            <div className="bg-black w-[12rem] h-[2px] mb-8"></div>
+            <div className="lines"></div>
             <div className="ml-8" onClick={handlePage2ButtonSubmit}>
               <div className="wizard-step">
                 <div className="circle flex items-center justify-center m-auto">
                   <div className="text-black">2</div>
                 </div>
-                <div className="text-center text-xl text-black mt-2 w-[9rem]">
-                  License Type
-                </div>
+                <div className="nav-text">License Type</div>
               </div>
             </div>
-            <div className="bg-black w-[12rem] h-[2px] mb-8"></div>
+            <div className="lines"></div>
             <div className="ml-8" onClick={handlePage3ButtonSubmit}>
               <div className="wizard-step">
                 <div className="circle flex items-center justify-center m-auto">
                   <div className="text-black ">3</div>
                 </div>
-                <div className="text-center text-xl text-black mt-2 w-[9rem]">
-                  License Details
-                </div>
+                <div className="nav-text">License Details</div>
               </div>
             </div>
-            <div className="bg-black w-[12rem] h-[2px] mb-8"></div>
+            <div className="lines"></div>
             <div className="ml-8" onClick={handlePage4ButtonSubmit}>
               <div className="wizard-step">
-                <div className="circle flex items-center justify-center">
+                <div className="circle flex items-center justify-center m-auto">
                   <div className="text-black">4</div>
                 </div>
-                <div className="text-center text-xl text-black mt-2 ">
-                  Preview
-                </div>
+                <div className="nav-text">Preview</div>
               </div>
             </div>
           </div>

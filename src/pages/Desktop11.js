@@ -121,6 +121,17 @@ const Desktop11 = ({
           <div className=" grid h-[100vh]">
             <Button
               // sx={{ height: 100 }}
+              // onClick={() => handlePageChange("/")}
+              className="cursor-pointer bg-white text-tomato relative hover:bg-white"
+              variant="contained"
+              color="secondary"
+            >
+              <div className="text-5xl">Home</div>
+              {/* Add a black bar before this button */}
+              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
+            </Button>
+            <Button
+              // sx={{ height: 100 }}
               className="cursor-pointer bg-tomato text-white border-black border-4 relative"
               variant="contained"
               color="secondary"
@@ -138,18 +149,6 @@ const Desktop11 = ({
               color="secondary"
             >
               <div className="text-5xl">Decrypt</div>
-              {/* Add a black bar before this button */}
-              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
-            </Button>
-
-            <Button
-              // sx={{ height: 100 }}
-              onClick={() => handlePageChange("/")}
-              className="cursor-pointer bg-tomato text-white relative"
-              variant="contained"
-              color="secondary"
-            >
-              <div className="text-5xl">Home</div>
               {/* Add a black bar before this button */}
               <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
             </Button>
@@ -334,7 +333,9 @@ const Desktop11 = ({
                 </div>
 
                 <div className="gap-3">
-                  <div className="text-21xl font-bold">Additional Comments</div>
+                  <div className="text-21xl font-bold mb-5">
+                    Additional Comments
+                  </div>
                   <TextField
                     className=""
                     sx={{ width: 500 }}

@@ -110,6 +110,17 @@ const Desktop12 = ({ formData, setFormData }) => {
           <div className=" grid h-[100vh]">
             <Button
               // sx={{ height: 100 }}
+              // onClick={() => handlePageChange("/")}
+              className="cursor-pointer bg-white text-tomato relative hover:bg-white"
+              variant="contained"
+              color="secondary"
+            >
+              <div className="text-5xl">Home</div>
+              {/* Add a black bar before this button */}
+              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
+            </Button>
+            <Button
+              // sx={{ height: 100 }}
               className="cursor-pointer bg-tomato text-white border-black border-4 relative"
               variant="contained"
               color="secondary"
@@ -127,18 +138,6 @@ const Desktop12 = ({ formData, setFormData }) => {
               color="secondary"
             >
               <div className="text-5xl">Decrypt</div>
-              {/* Add a black bar before this button */}
-              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
-            </Button>
-
-            <Button
-              // sx={{ height: 100 }}
-              onClick={() => handlePageChange("/")}
-              className="cursor-pointer bg-tomato text-white relative"
-              variant="contained"
-              color="secondary"
-            >
-              <div className="text-5xl">Home</div>
               {/* Add a black bar before this button */}
               <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
             </Button>
@@ -213,33 +212,33 @@ const Desktop12 = ({ formData, setFormData }) => {
 
             <div className=" mx-[5rem] mt-10 m-auto grid gap-2">
               <div className="text-11xl">
-                <span className="font-bold">User Name: </span>
+                <span className="font-medium">User Name: </span>
                 {formData.name}
               </div>
               <div className="grid gap-2">
                 <div className="text-11xl">
-                  <span className="font-bold">Phone Number: </span>
+                  <span className="font-med">Phone Number: </span>
                   {formData.phone}
                 </div>
                 <div className="text-11xl">
-                  <span className="font-bold">Email: </span>
+                  <span className="font-med">Email: </span>
                   {formData.email}
                 </div>
               </div>
               <div className="text-11xl">
-                <span className="font-bold">Organization: </span>
+                <span className="font-med">Organization: </span>
                 {formData.organization}
               </div>
               <div className="text-11xl">
-                <span className="font-bold">License Type: </span>
+                <span className="font-med">License Type: </span>
                 {formData.licenseType}
               </div>
               <div className="text-11xl">
-                <span className="font-bold">Valid Upto: </span>
+                <span className="font-med">Valid Upto: </span>
                 {formData.endDate !== "" ? formData.endDate : "None"}
               </div>
               <div className="text-11xl">
-                <span className="font-bold">License Duration: </span>
+                <span className="font-med">License Duration: </span>
                 {formData.noOfDays}
               </div>
               <div>
@@ -254,7 +253,7 @@ const Desktop12 = ({ formData, setFormData }) => {
                 >{`Selected Modules`}</Button>
               </div>
               <div className="grid gap-2">
-                <div className="text-11xl font-bold">
+                <div className="text-11xl font-med">
                   License date Restrictions{" "}
                 </div>
                 <div className="text-11xl">
@@ -262,7 +261,7 @@ const Desktop12 = ({ formData, setFormData }) => {
                 </div>
               </div>
               <div className="grid gap-2">
-                <div className="text-11xl font-bold">Additional Comments</div>
+                <div className="text-11xl font-med">Additional Comments</div>
                 <div className="text-11xl">{formData.comments}</div>
               </div>
             </div>

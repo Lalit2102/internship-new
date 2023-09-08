@@ -43,7 +43,7 @@ export default function History() {
     {
       field: "encryptedLicense",
       headerName: "Encrypted License",
-      width: 350,
+      width: 200,
       headerClassName: "bold-header",
     },
     {
@@ -102,7 +102,7 @@ export default function History() {
             >
               <div className="text-5xl">Decrypt</div>
               {/* Add a black bar before this button */}
-              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
+              {/* <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div> */}
             </Button>
 
             <Button
@@ -120,21 +120,21 @@ export default function History() {
         </div>
       </div>
 
-      <div className="w-10/12 ml-[16.6%]">
-        <div className="w-[90%] m-auto ">
+      <div className="w-10/12 ml-[16%]">
+        <div className="w-[87.2%] m-auto ">
           <DataGrid
             sx={{
               "& .MuiDataGrid-root": {
-                border: "2px solid tomato", // Tomato-colored border for the entire DataGrid
+                border: "3px solid #bbbbbb", // #bbbbbb-colored border for the entire DataGrid
               },
               "& .MuiDataGrid-cell": {
-                border: "2px solid tomato", // Tomato-colored border for individual cells
+                border: "3px solid #bbbbbb", // #bbbbbb-colored border for individual cells
                 borderRight: "none", // Remove right border for cells
                 borderTop: "none", // Remove top border for cells
                 // Add more CSS for customization as needed
               },
               "& .MuiDataGrid-columnHeader": {
-                border: "2px solid tomato", // Tomato-colored border for individual cells
+                border: "3px solid #bbbbbb", // Tomato-colored border for individual cells
                 borderRight: "none", // Remove right border for cells
                 borderTop: "none", // Remove top border for cells
                 // Add more CSS for customization as needed

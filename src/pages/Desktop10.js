@@ -216,6 +216,17 @@ const Desktop10 = ({
           <div className=" grid h-[100vh]">
             <Button
               // sx={{ height: 100 }}
+              // onClick={() => handlePageChange("/")}
+              className="cursor-pointer bg-white text-tomato relative hover:bg-white"
+              variant="contained"
+              color="secondary"
+            >
+              <div className="text-5xl">Home</div>
+              {/* Add a black bar before this button */}
+              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
+            </Button>
+            <Button
+              // sx={{ height: 100 }}
               className="cursor-pointer bg-tomato text-white border-black border-4 relative"
               variant="contained"
               color="secondary"
@@ -233,18 +244,6 @@ const Desktop10 = ({
               color="secondary"
             >
               <div className="text-5xl">Decrypt</div>
-              {/* Add a black bar before this button */}
-              <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
-            </Button>
-
-            <Button
-              // sx={{ height: 100 }}
-              onClick={() => handlePageChange("/")}
-              className="cursor-pointer bg-tomato text-white relative"
-              variant="contained"
-              color="secondary"
-            >
-              <div className="text-5xl">Home</div>
               {/* Add a black bar before this button */}
               <div className="absolute top-0 left-[50%] translate-x-[-50%] w-[70%] h-[2px] bg-white justify-center"></div>
             </Button>
@@ -313,7 +312,7 @@ const Desktop10 = ({
 
         <div className="main-div">
           <div className="right-div">
-            <div className="grid w-[70%] m-auto gap-5 mt-10">
+            <div className="grid w-[80%] m-auto gap-5 mt-10">
               <div className="font-bold text-21xl" id="pageTwoSubheading">
                 License Type:
               </div>
@@ -458,12 +457,14 @@ const Desktop10 = ({
                         activeLink === link ? "#EB5351" : "whitesmoke",
                       color: activeLink === link ? "white" : "black",
                       cursor: "pointer",
-                      border: "2px solid black",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      height: "100px",
+                      height: "80px",
+                      // width: "300px",
                       position: "relative",
+                      border: activeLink == link ? "none" : "1px solid grey",
+                      borderRadius: "14px",
                     }}
                     className="relative"
                   >
@@ -489,8 +490,9 @@ const Desktop10 = ({
                         style={{
                           zIndex: 2,
                           color: "black",
-                          opacity: activeLink == link ? 0 : 1,
+                          // opacity: activeLink == link ? 0 : 1,
                           backgroundColor: "#F6E8DD",
+                          //
                         }}
                       >
                         {/* Modal content goes here */}
